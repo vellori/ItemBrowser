@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sHT-4U-d7I">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail-->
+        <scene sceneID="DCs-No-jeG">
+            <objects>
+                <viewController title="Detail" hidesBottomBarWhenPushed="YES" id="sHT-4U-d7I" customClass="DetailViewController" customModule="Houses_Vellori" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cEZ-da-nuk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OLg-FV-REi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                <subviews>
+                                    <stackView autoresizesSubviews="NO" opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="uJM-RY-7rh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" id="3Fr-8d-40o"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="uJM-RY-7rh" secondAttribute="bottom" id="5Cw-hW-ktM"/>
+                                    <constraint firstItem="uJM-RY-7rh" firstAttribute="top" secondItem="OLg-FV-REi" secondAttribute="top" id="6SR-3u-FrR"/>
+                                    <constraint firstAttribute="trailing" secondItem="uJM-RY-7rh" secondAttribute="trailing" id="8Iz-4H-GKb"/>
+                                    <constraint firstItem="uJM-RY-7rh" firstAttribute="leading" secondItem="OLg-FV-REi" secondAttribute="leading" id="BUW-lr-HMb"/>
+                                    <constraint firstItem="uJM-RY-7rh" firstAttribute="width" secondItem="OLg-FV-REi" secondAttribute="width" id="Toz-Xj-ztJ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OLg-FV-REi" firstAttribute="top" secondItem="GOe-sR-sAD" secondAttribute="top" id="1jb-ER-WZf"/>
+                            <constraint firstItem="OLg-FV-REi" firstAttribute="width" secondItem="cEZ-da-nuk" secondAttribute="width" id="2nv-iL-U0f"/>
+                            <constraint firstItem="OLg-FV-REi" firstAttribute="leading" secondItem="GOe-sR-sAD" secondAttribute="leading" id="MBX-HG-Lsc"/>
+                            <constraint firstItem="GOe-sR-sAD" firstAttribute="trailing" secondItem="OLg-FV-REi" secondAttribute="trailing" id="Nst-nf-9we"/>
+                            <constraint firstItem="GOe-sR-sAD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OLg-FV-REi" secondAttribute="bottom" id="ig7-ET-P52"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GOe-sR-sAD"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="300"/>
+                    <connections>
+                        <outlet property="stackView" destination="uJM-RY-7rh" id="0Ev-FL-kCe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V9e-zQ-Xds" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="219"/>
+        </scene>
+    </scenes>
+</document>

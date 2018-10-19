@@ -1,7 +1,141 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nqD-G8-n2O">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--GridView-->
+        <scene sceneID="5OV-a8-XTq">
+            <objects>
+                <collectionViewController storyboardIdentifier="gridBrowser" title="GridView" id="nqD-G8-n2O" customClass="BrowserInterface" customModule="Houses_Vellori" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" prefetchingEnabled="NO" id="Z88-Lt-NRL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Jox-Qm-Iw3">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HouseCell" id="TDk-Qx-yaq" customClass="HouseCell" customModule="Houses_Vellori" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="0.0" width="100" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="96"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w85-iC-y5z">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="96"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rue-9t-McE">
+                                                    <rect key="frame" x="29" y="37.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="❤️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7N-y2-aUg">
+                                                    <rect key="frame" x="38" y="8" width="23" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="rue-9t-McE" firstAttribute="centerY" secondItem="w85-iC-y5z" secondAttribute="centerY" id="NJD-85-3rl"/>
+                                                <constraint firstItem="rue-9t-McE" firstAttribute="centerX" secondItem="w85-iC-y5z" secondAttribute="centerX" id="o8g-lw-lba"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="w85-iC-y5z" firstAttribute="top" secondItem="TDk-Qx-yaq" secondAttribute="top" id="46V-fj-Fbt"/>
+                                    <constraint firstItem="w85-iC-y5z" firstAttribute="leading" secondItem="TDk-Qx-yaq" secondAttribute="leading" id="tbg-h0-LZB"/>
+                                    <constraint firstAttribute="bottom" secondItem="w85-iC-y5z" secondAttribute="bottom" id="woG-ET-d4Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="w85-iC-y5z" secondAttribute="trailing" id="xeu-aG-GiX"/>
+                                </constraints>
+                                <size key="customSize" width="100" height="96"/>
+                                <connections>
+                                    <outlet property="loveSight" destination="c7N-y2-aUg" id="OB0-lK-gqW"/>
+                                    <outlet property="shortName" destination="rue-9t-McE" id="5oc-5x-gRj"/>
+                                    <segue destination="c7F-xL-xGS" kind="show" id="NuW-Bh-Wuh"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HzHouseCell" id="dUi-Mp-qtD" customClass="HouseCell" customModule="Houses_Vellori" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="96" width="300" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQS-Vk-KCG">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="120"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8F-Pf-Inz">
+                                                    <rect key="frame" x="16" y="49.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="❤️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJu-4T-KtV">
+                                                    <rect key="frame" x="269" y="8" width="23" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="f8F-Pf-Inz" firstAttribute="leading" secondItem="fQS-Vk-KCG" secondAttribute="leading" constant="16" id="Kjq-Qj-UHz"/>
+                                                <constraint firstItem="f8F-Pf-Inz" firstAttribute="centerY" secondItem="fQS-Vk-KCG" secondAttribute="centerY" id="PT2-rP-bBE"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="fQS-Vk-KCG" firstAttribute="leading" secondItem="dUi-Mp-qtD" secondAttribute="leading" id="AeY-vn-dQw"/>
+                                    <constraint firstAttribute="bottom" secondItem="fQS-Vk-KCG" secondAttribute="bottom" id="oPh-zz-taW"/>
+                                    <constraint firstItem="fQS-Vk-KCG" firstAttribute="top" secondItem="dUi-Mp-qtD" secondAttribute="top" id="qcu-IU-5P1"/>
+                                    <constraint firstAttribute="trailing" secondItem="fQS-Vk-KCG" secondAttribute="trailing" id="w8E-wf-8cv"/>
+                                </constraints>
+                                <size key="customSize" width="300" height="120"/>
+                                <connections>
+                                    <outlet property="loveSight" destination="WJu-4T-KtV" id="KTV-es-eTL"/>
+                                    <outlet property="shortName" destination="f8F-Pf-Inz" id="5NK-FP-mY4"/>
+                                    <segue destination="c7F-xL-xGS" kind="show" id="fad-Ll-Py6"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="nqD-G8-n2O" id="b1T-pO-VDQ"/>
+                            <outlet property="delegate" destination="nqD-G8-n2O" id="5V1-N7-nhm"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZoR-ah-Sdj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="166.8665667166417"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="3J5-dj-bhw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="c7F-xL-xGS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVd-dU-P4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="127"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NuW-Bh-Wuh"/>
+    </inferredMetricsTieBreakers>
 </document>

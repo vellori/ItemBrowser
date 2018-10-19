@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="House" representedClassName="House" syncable="YES" codeGenerationType="class">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loved" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="shortName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="myHouses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MyHouse" inverseName="houses" inverseEntity="MyHouse" syncable="YES"/>
+    </entity>
+    <entity name="MyHouse" representedClassName="MyHouse" syncable="YES" codeGenerationType="class">
+        <relationship name="houses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="House" inverseName="myHouses" inverseEntity="House" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="House" positionX="-45" positionY="0" width="128" height="120"/>
+        <element name="MyHouse" positionX="-18" positionY="54" width="128" height="60"/>
+    </elements>
 </model>

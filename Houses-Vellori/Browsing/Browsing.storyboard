@@ -1,7 +1,105 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WRn-Tl-XXQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Browser-->
+        <scene sceneID="bMz-yg-Hab">
+            <objects>
+                <viewController storyboardIdentifier="browsing" title="Browser" id="d6M-ZM-3E5" customClass="BrowsingController" customModule="Houses_Vellori" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Rj-dw-ZTJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOp-pQ-pLI">
+                                <rect key="frame" x="329" y="64" width="30" height="30"/>
+                                <state key="normal" title="꠫"/>
+                                <connections>
+                                    <action selector="toggleGrid" destination="d6M-ZM-3E5" eventType="touchUpInside" id="jvq-Dd-Y40"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQo-16-JDB">
+                                <rect key="frame" x="0.0" y="144" width="375" height="523"/>
+                                <connections>
+                                    <segue destination="Cx5-F6-sbU" kind="embed" id="omH-rF-wCA"/>
+                                </connections>
+                            </containerView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ow-Ru-MZM">
+                                <rect key="frame" x="-20" y="33" width="375" height="93"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8en-3A-4Qd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8en-3A-4Qd" secondAttribute="bottom" id="KpX-cT-ycd"/>
+                                    <constraint firstAttribute="trailing" secondItem="8en-3A-4Qd" secondAttribute="trailing" id="Ksd-HX-11e"/>
+                                    <constraint firstAttribute="height" constant="50" id="QwG-ar-gSi"/>
+                                    <constraint firstItem="8en-3A-4Qd" firstAttribute="top" secondItem="5Ow-Ru-MZM" secondAttribute="top" id="etW-1D-vah"/>
+                                    <constraint firstItem="8en-3A-4Qd" firstAttribute="leading" secondItem="5Ow-Ru-MZM" secondAttribute="leading" id="kZp-VZ-FBg"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ua3-ME-3Ut" firstAttribute="top" secondItem="BOp-pQ-pLI" secondAttribute="top" id="5wf-qI-GNL"/>
+                            <constraint firstItem="OQo-16-JDB" firstAttribute="top" secondItem="5Ow-Ru-MZM" secondAttribute="bottom" id="Azk-kZ-m9F"/>
+                            <constraint firstItem="ua3-ME-3Ut" firstAttribute="trailing" secondItem="BOp-pQ-pLI" secondAttribute="trailing" constant="16" id="V2D-Ee-ofS"/>
+                            <constraint firstItem="OQo-16-JDB" firstAttribute="width" secondItem="1Rj-dw-ZTJ" secondAttribute="width" id="eQK-AM-W2b"/>
+                            <constraint firstItem="ua3-ME-3Ut" firstAttribute="bottom" secondItem="OQo-16-JDB" secondAttribute="bottom" id="gh3-UK-GIp"/>
+                            <constraint firstItem="OQo-16-JDB" firstAttribute="centerX" secondItem="ua3-ME-3Ut" secondAttribute="centerX" id="kDr-G4-A4y"/>
+                            <constraint firstItem="5Ow-Ru-MZM" firstAttribute="centerX" secondItem="ua3-ME-3Ut" secondAttribute="centerX" id="qrW-2N-vKO"/>
+                            <constraint firstItem="5Ow-Ru-MZM" firstAttribute="top" secondItem="BOp-pQ-pLI" secondAttribute="bottom" id="s7r-2d-vOd"/>
+                            <constraint firstItem="5Ow-Ru-MZM" firstAttribute="width" secondItem="1Rj-dw-ZTJ" secondAttribute="width" id="sPv-PV-zLe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ua3-ME-3Ut"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GWx-1S-axO"/>
+                    <connections>
+                        <outlet property="sectionSelector" destination="S4l-NZ-iP6" id="Q2d-r1-6bw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eti-fX-h4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="S4l-NZ-iP6" customClass="SectionsSelector" customModule="Houses_Vellori" customModuleProvider="target">
+                    <connections>
+                        <outlet property="stackView" destination="8en-3A-4Qd" id="8RC-6p-RuL"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="796" y="167.76611694152925"/>
+        </scene>
+        <!--GridBrowser-->
+        <scene sceneID="WqR-e2-R6b">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GridBrowser" id="Cx5-F6-sbU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNP-KG-viv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428.8" y="219.49025487256372"/>
+        </scene>
+        <!--Browser-->
+        <scene sceneID="PoM-zd-Qxa">
+            <objects>
+                <navigationController title="Browser" automaticallyAdjustsScrollViewInsets="NO" id="WRn-Tl-XXQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zFe-uU-bms">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="d6M-ZM-3E5" kind="relationship" relationship="rootViewController" id="xfR-Uo-lvB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jce-SY-00R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-143.19999999999999" y="167.76611694152925"/>
+        </scene>
+    </scenes>
 </document>

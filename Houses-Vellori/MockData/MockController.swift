@@ -7,3 +7,24 @@
 //
 
 import Foundation
+import CoreData
+
+class MockController {
+    var isDatabasePresent: Bool {
+        get {
+            let viewContext = CoreData.viewContext
+            let fetch: NSFetchRequest<House> = House.fetchRequest()
+            let count = try? viewContext.count(for: fetch)
+            print("\(count ?? 0) in store")
+            return count ?? 0 > 0
+        }
+    }
+    
+    func createDatabaseIfNeeded() {
+        guard !isDatabasePresent else {
+            return
+        }
+        print("Db creation in progress...")
+        MockDataGeneration().create()
+    }
+}
